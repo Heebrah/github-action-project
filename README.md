@@ -238,16 +238,29 @@ jobs:
 
 
 ## 🧪 **Experiment and Learn**
-After pushing my changes i will go to github repo to check the action if it's successful
+- After pushing my changes i will go to github repo to check the action if it's successful
 ![caption](/img/8.seeing-detail-action.jpg)
 
-This shows that it's only node-version 20 that will work because my node is node 20
+- using version 14 and 16 on my node_js.yml file
+![caption](/img/15.outdate-version.jpg)
+
+- The run fail because it's an outdated node version of my system which is version 20. 
+![caption](/img/13.run-fail.jpg)
+
+- checking the error
+![caption](/img/14.outdated-version.jpg)
+
+
+- check my node version
+![caption](/img/9.build-success.jpg)
+
+- This shows that it's only node-version 20 that will work because my node is node 20
 ![caption](/img/6.build-run-20.jpg)
 
-So i can only just format my node_js.yml to be node-version 20
+- So i can only just format my node_js.yml to be node-version 20
 ![caption](/img/7.change-node-version.jpg)
 
-![caption](/img/9.build-success.jpg)
+
 
 
 And running my server with the command `
@@ -256,8 +269,10 @@ node index.js
 ```
 ![caption](/img/10.click-node-js.jpg)
 
-I can see Hello world display which shows my server is up and running
+- I can see Hello world display which shows my server is up and running
 ![caption](/img/12.hello-world.jpg)
+
+Thank you.
 
 
 
