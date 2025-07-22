@@ -220,11 +220,14 @@ jobs:
 
      ```json
      "scripts": {
-       "test": "vitest"
+       "test": "jest"
      }
      ```
-     we can install vitest before using the script above.
+     we can install jest before using the script above.
      ![caption](/img/6.vitest-install.jpg)
+
+     * and running the jest with npm test
+      ![caption](/img/16-run-jest.jpg)
 
      or just leave it as
      ```json
@@ -251,14 +254,10 @@ jobs:
 ![caption](/img/14.outdated-version.jpg)
 
 
-- check my node version
-![caption](/img/9.build-success.jpg)
-
 - This shows that it's only node-version 20 that will work because my node is node 20
 ![caption](/img/6.build-run-20.jpg)
 
-- So i can only just format my node_js.yml to be node-version 20
-![caption](/img/7.change-node-version.jpg)
+
 
 
 
