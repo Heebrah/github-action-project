@@ -29,7 +29,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm CI
+        run: npm ci
 
       - name: Build (if script is present)
         run: npm run build --if-present
