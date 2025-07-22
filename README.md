@@ -103,7 +103,7 @@ jobs:
 ### 2. **Create a Simple Node.js App**
 
 You’ll build a basic Express server:
-![caption](/img/3.server.jpg)
+
 
 
 #### Steps:
@@ -114,7 +114,9 @@ You’ll build a basic Express server:
   npm init -y
   npm install express
   ```
-  
+![caption](/img/4.npm-init.jpg)
+![caption](/img/4.npm-install.jpg)
+
 
 * Create a file called `index.js` with this content:
 
@@ -131,6 +133,7 @@ You’ll build a basic Express server:
     console.log(`App listening at http://localhost:${port}`);
   });
   ```
+  ![caption](/img/3.server.jpg)
 
 * Commit and push it to GitHub:
 
@@ -181,6 +184,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
 ```
+![caption](/img/5.yaml-file.jpg)
 
 ---
 
@@ -216,29 +220,45 @@ jobs:
 
      ```json
      "scripts": {
-       "test": "jest"
+       "test": "vitest"
      }
+     ```
+     we can install vitest before using the script above.
+     ![caption](/img/6.vitest-install.jpg)
+
+     or just leave it as
+     ```json
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     }
+     
      ```
 
 2. **Automate Deployment**:
 
-   * After testing, you can add a step to deploy to:
-
-     * Heroku
-     * AWS
-     * Render
-     * Netlify (if frontend)
-
----
 
 ## 🧪 **Experiment and Learn**
+After pushing my changes i will go to github repo to check the action if it's successful
+![caption](/img/8.seeing-detail-action.jpg)
 
-* Change Node.js versions in the `matrix` to test with different versions.
-* Modify steps and observe what changes in the Actions tab.
-* Try:
+This shows that it's only node-version 20 that will work because my node is node 20
+![caption](/img/6.build-run-20.jpg)
 
-  ```yaml
-  matrix:
-    node-version: [16.x, 18.x, 20.x]
-  ```
-* Add unit tests, integration tests, linting steps, etc.
+So i can only just format my node_js.yml to be node-version 20
+![caption](/img/7.change-node-version.jpg)
+
+![caption](/img/9.build-success.jpg)
+
+
+And running my server with the command `
+```
+node index.js
+```
+![caption](/img/10.click-node-js.jpg)
+
+I can see Hello world display which shows my server is up and running
+![caption](/img/12.hello-world.jpg)
+
+
+
+
