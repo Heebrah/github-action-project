@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build (if script is present)
-        run: npm run build --if-present
+        run: npm start build --if-present
 
       - name: Run tests
         run: npm test
